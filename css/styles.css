@@ -387,12 +387,6 @@ input,select,textarea{background:#ffffff;color:#0f172a;border:1px solid var(--bo
   .billing-switch[data-cycle="annual"] .billing-toggle .knob{transform:translateX(32px)}
 }
 
-/* Plan gating preview (dev only) */
-[data-required-plan]{position:relative}
-.plan-locked{filter:blur(1px) saturate(.4);opacity:.55;pointer-events:none}
-.plan-locked .lock-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;letter-spacing:.4px;color:#166534;background:rgba(255,255,255,.82);backdrop-filter:blur(2px);border:1px dashed #86efac;border-radius:12px;box-shadow:0 4px 18px -6px rgba(34,197,94,.35);gap:6px;pointer-events:auto;cursor:pointer}
-.plan-locked .lock-overlay span{background:#dcfce7;padding:4px 8px;border-radius:999px;color:#166534}
-.plan-locked:hover{opacity:.65}
 
 /* Addons */
 .addons-section{padding:10px 0 70px}
