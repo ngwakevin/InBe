@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pricing — InBeas</title>
   <meta name="description" content="InBeas pricing plans: choose the membership that fits your relocation journey." />
+  <!-- Preview gating activation hint: presence of this meta + ?preview=1 triggers client-only gating -->
+  <meta name="inbe-preview" content="plan-gating" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -90,8 +92,8 @@
             <p class="billing-note">per month</p>
             <ul class="feature-list">
               <li>All Starter features</li>
-              <li>City & commune deep-dives</li>
-              <li>Financial & housing mini-guides</li>
+              <li data-required-plan="plus">City & commune deep-dives</li>
+              <li data-required-plan="plus">Financial & housing mini-guides</li>
               <li>Email support (48h)</li>
             </ul>
             <button class="btn-plan accent" type="button">Upgrade</button>
@@ -105,9 +107,9 @@
             <p class="billing-note">per month</p>
             <ul class="feature-list">
               <li>All Plus features</li>
-              <li>Document prep & templates</li>
-              <li>Priority support (24h)</li>
-              <li>Quarterly live Q&A</li>
+              <li data-required-plan="pro">Document prep & templates</li>
+              <li data-required-plan="pro">Priority support (24h)</li>
+              <li data-required-plan="pro">Quarterly live Q&A</li>
             </ul>
             <button class="btn-plan primary" type="button">Choose Pro</button>
           </div>
@@ -120,9 +122,9 @@
             <p class="billing-note">Contact us</p>
             <ul class="feature-list">
               <li>All Pro features</li>
-              <li>Onboarding workshops</li>
-              <li>Dedicated success channel</li>
-              <li>Custom knowledge base</li>
+              <li data-required-plan="org">Onboarding workshops</li>
+              <li data-required-plan="org">Dedicated success channel</li>
+              <li data-required-plan="org">Custom knowledge base</li>
             </ul>
             <button class="btn-plan outline" type="button">Talk to us</button>
           </div>
@@ -150,15 +152,15 @@
                 <td class="yes"></td><td class="yes"></td><td class="yes"></td><td class="yes"></td>
               </tr>
               <tr>
-                <th scope="row">Commune deep-dives</th>
+                <th scope="row" data-required-plan="plus">Commune deep-dives</th>
                 <td class="no"></td><td class="yes"></td><td class="yes"></td><td class="yes"></td>
               </tr>
               <tr>
-                <th scope="row">Housing mini-guides</th>
+                <th scope="row" data-required-plan="plus">Housing mini-guides</th>
                 <td class="no"></td><td class="yes"></td><td class="yes"></td><td class="yes"></td>
               </tr>
               <tr>
-                <th scope="row">Document templates</th>
+                <th scope="row" data-required-plan="pro">Document templates</th>
                 <td class="no"></td><td class="no"></td><td class="yes"></td><td class="yes"></td>
               </tr>
               <tr>
@@ -166,15 +168,15 @@
                 <td>Community</td><td>48h</td><td>24h</td><td>Dedicated</td>
               </tr>
               <tr>
-                <th scope="row">Live Q&A sessions</th>
+                <th scope="row" data-required-plan="pro">Live Q&A sessions</th>
                 <td class="no"></td><td class="no"></td><td>Quarterly</td><td>Custom</td>
               </tr>
               <tr>
-                <th scope="row">Team dashboard</th>
+                <th scope="row" data-required-plan="org">Team dashboard</th>
                 <td class="no"></td><td class="no"></td><td class="no"></td><td class="yes"></td>
               </tr>
               <tr>
-                <th scope="row">Custom knowledge base</th>
+                <th scope="row" data-required-plan="org">Custom knowledge base</th>
                 <td class="no"></td><td class="no"></td><td class="no"></td><td class="yes"></td>
               </tr>
             </tbody>
@@ -261,5 +263,6 @@
     })();
   </script>
   <script src="js/app.js"></script>
+  <script src="js/plan-gating.js"></script>
 </body>
 </html>
