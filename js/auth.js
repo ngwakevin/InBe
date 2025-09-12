@@ -32,6 +32,12 @@
       nav.appendChild(authContainer);
     }
 
+    function getStoredPlan(){
+      return localStorage.getItem('inbe_user_plan');
+    }
+    function setStoredPlan(plan){
+      if(plan) localStorage.setItem('inbe_user_plan', plan);
+    }
     function render(){
       authContainer.innerHTML='';
       account = msalInstance.getActiveAccount() || msalInstance.getAllAccounts()[0];
@@ -43,7 +49,8 @@
         authContainer.appendChild(signIn);
       } else {
         const greet = document.createElement('span');
-        greet.textContent = 'Hi, ' + (account.name?.split(' ')[0] || 'User');
+        const planLabel = getStoredPlan();
+        greet.textContent = 'Hi, ' + (account.name?.split(' ')[0] || 'User') + (planLabel? ' · '+planLabel:'');
         greet.style.fontWeight='600';
         greet.style.marginRight='10px';
         const signOut = document.createElement('a');
@@ -61,6 +68,26 @@
         render();
       } catch(e){ console.error('[auth] login failed', e); }
     }
+
+    // Public helper for plan-based login (called from pricing page)
+    window.inbeAuth = window.inbeAuth || {};
+    window.inbeAuth.loginWithPlan = async function(plan){
+      try {
+        localStorage.setItem('inbe_pending_plan', plan);
+        await msalInstance.loginPopup(loginRequest);
+        const pending = localStorage.getItem('inbe_pending_plan');
+        if(pending){ setStoredPlan(pending); localStorage.removeItem('inbe_pending_plan'); }
+        render();
+      }catch(e){ console.error('[auth] plan login failed', e); }
+    };
+
+    // If login already present and a pendingPlan was set pre-login (edge case)
+    (function syncPending(){
+      if(msalInstance.getActiveAccount()){
+        const pending = localStorage.getItem('inbe_pending_plan');
+        if(pending){ setStoredPlan(pending); localStorage.removeItem('inbe_pending_plan'); }
+      }
+    })();
 
     function logout(){
       const account = msalInstance.getActiveAccount();

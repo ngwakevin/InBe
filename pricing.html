@@ -78,7 +78,7 @@
               <li>Public region guides</li>
               <li>Basic tips & FAQs</li>
             </ul>
-            <button class="btn-plan primary" type="button">Get Started</button>
+            <button class="btn-plan primary" type="button" data-plan-select="free">Get Started</button>
           </div>
           <div class="plan-card highlighted" data-plan="plus">
             <div class="plan-badge">Popular</div>
@@ -94,7 +94,7 @@
               <li>Financial & housing mini-guides</li>
               <li>Email support (48h)</li>
             </ul>
-            <button class="btn-plan accent" type="button">Upgrade</button>
+            <button class="btn-plan accent" type="button" data-plan-select="plus">Upgrade</button>
           </div>
           <div class="plan-card" data-plan="pro">
             <div class="plan-head">
@@ -109,7 +109,7 @@
               <li>Priority support (24h)</li>
               <li>Quarterly live Q&A</li>
             </ul>
-            <button class="btn-plan primary" type="button">Choose Pro</button>
+            <button class="btn-plan primary" type="button" data-plan-select="pro">Choose Pro</button>
           </div>
           <div class="plan-card" data-plan="org">
             <div class="plan-head">
@@ -124,7 +124,7 @@
               <li>Dedicated success channel</li>
               <li>Custom knowledge base</li>
             </ul>
-            <button class="btn-plan outline" type="button">Talk to us</button>
+            <button class="btn-plan outline" type="button" data-plan-select="org">Talk to us</button>
           </div>
         </div>
         <p class="small-disclaimer">Prices in EUR. Taxes may apply. Cancel anytime. Annual pricing reflects effective monthly rate after discount.</p>
@@ -256,6 +256,28 @@
           const expanded=btn.getAttribute('aria-expanded')==='true';
           btn.setAttribute('aria-expanded', String(!expanded));
           if(expanded){panel.hidden=true;}else{panel.hidden=false;}
+        });
+      });
+    })();
+  </script>
+  <script>
+    // Plan button handlers: store chosen plan and trigger auth if needed
+    (function(){
+      const buttons=[...document.querySelectorAll('[data-plan-select]')];
+      if(!buttons.length) return;
+      buttons.forEach(btn=>{
+        btn.addEventListener('click',()=>{
+          const plan=btn.getAttribute('data-plan-select');
+          // If user already signed in and helper exists, just persist plan
+          if(window.inbeAuth && typeof window.inbeAuth.loginWithPlan==='function'){
+            // We'll ask loginWithPlan to also persist plan (handles both signed/unsigned)
+            window.inbeAuth.loginWithPlan(plan);
+          } else {
+            try{ localStorage.setItem('inbe_pending_plan', plan); }catch(e){}
+            // Fallback: navigate to top (Sign In button) or show alert
+            const authLink=document.querySelector('#inbe-auth-container a');
+            if(authLink){ authLink.focus(); authLink.click(); }
+          }
         });
       });
     })();
