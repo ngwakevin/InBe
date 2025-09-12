@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="420" height="520" viewBox="0 0 420 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">InBeas International Students Illustration</title>
+  <desc id="desc">Student with graduation cap, backpack, and transport card.</desc>
+  <defs>
+    <linearGradient id="bgs" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef2ff"/>
+      <stop offset="100%" stop-color="#e0f2fe"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M60 110C60 70 120 36 188 36C260 36 330 92 352 152C374 212 340 274 298 310C252 348 184 372 138 352C86 330 60 286 60 240V110Z" fill="url(#bgs)"/>
+
+  
+
+  <!-- student -->
+  <g transform="translate(90,130)" stroke="#0f172a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="90" cy="36" r="22" fill="#fde68a"/>
+    <rect x="66" y="66" width="52" height="70" rx="10" fill="#dbeafe"/>
+    <path d="M66 84 h52" stroke="#93c5fd"/>
+
+    <!-- backpack -->
+    <rect x="52" y="72" width="28" height="56" rx="10" fill="#0ea5e9"/>
+
+    <!-- transport card -->
+    <rect x="130" y="92" width="38" height="24" rx="4" fill="#22c55e"/>
+    <path d="M134 100 h30" stroke="#0f172a"/>
+    <path d="M134 108 h20" stroke="#0f172a"/>
+
+    <!-- legs -->
+    <path d="M88 136 v52"/>
+    <path d="M104 136 v52"/>
+    <rect x="78" y="188" width="24" height="10" rx="5" fill="#0ea5e9"/>
+    <rect x="98" y="188" width="24" height="10" rx="5" fill="#22c55e"/>
+
+    <!-- arms -->
+    <path d="M66 94 c-20 -4 -34 -2 -46 8"/>
+    <path d="M118 96 c24 6 36 14 46 26"/>
+  </g>
+
+  
+</svg>

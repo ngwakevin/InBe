@@ -1,0 +1,30 @@
+{
+  "categories": {
+    "commune": {"label": "Commune Offices", "icon": "🏛"},
+    "hospital": {"label": "Hospitals", "icon": "🩺"},
+    "pharmacy": {"label": "Pharmacies", "icon": "💊"},
+    "school": {"label": "Schools", "icon": "🎓"},
+    "transport": {"label": "Transport", "icon": "🚉"}
+  },
+  "places": [
+    {"id":"commune_brussels","name":"Brussels City Hall","category":"commune","lat":50.84673,"lng":4.35247,"address":"Grand Place 1, 1000 Bruxelles"},
+    {"id":"commune_antwerp","name":"Antwerp District House","category":"commune","lat":51.2172,"lng":4.4203,"address":"Francis Wellesplein 1, 2018 Antwerpen"},
+    {"id":"commune_liege","name":"Liège City Administration","category":"commune","lat":50.64056,"lng":5.57194,"address":"Place du Marché 2, 4000 Liège"},
+
+    {"id":"hospital_stluc","name":"Cliniques universitaires Saint-Luc","category":"hospital","lat":50.8745,"lng":4.4529,"address":"Avenue Hippocrate 10, 1200 Bruxelles"},
+    {"id":"hospital_uzgent","name":"UZ Gent","category":"hospital","lat":51.022,"lng":3.709,"address":"Corneel Heymanslaan 10, 9000 Gent"},
+    {"id":"hospital_chuliege","name":"CHU de Liège","category":"hospital","lat":50.588,"lng":5.568,"address":"Domaine Universitaire du Sart Tilman, 4000 Liège"},
+
+    {"id":"pharmacy_grandplace","name":"Pharmacy Grand Place","category":"pharmacy","lat":50.8469,"lng":4.3542,"address":"Rue au Beurre 46, 1000 Bruxelles"},
+    {"id":"pharmacy_antwerp","name":"Apotheek Groenplaats","category":"pharmacy","lat":51.2181,"lng":4.4012,"address":"Groenplaats 19, 2000 Antwerpen"},
+    {"id":"pharmacy_liege","name":"Pharmacie Saint-Lambert","category":"pharmacy","lat":50.6459,"lng":5.5734,"address":"Place Saint-Lambert, 4000 Liège"},
+
+    {"id":"school_ulsb","name":"Université libre de Bruxelles","category":"school","lat":50.813,"lng":4.380,"address":"Avenue Franklin Roosevelt 50, 1050 Bruxelles"},
+    {"id":"school_kuleuven","name":"KU Leuven","category":"school","lat":50.877,"lng":4.704,"address":"Oude Markt, 3000 Leuven"},
+    {"id":"school_ulg","name":"University of Liège","category":"school","lat":50.580,"lng":5.560,"address":"Place du 20-Août 7, 4000 Liège"},
+
+    {"id":"transport_central","name":"Bruxelles-Central Station","category":"transport","lat":50.8458,"lng":4.3573,"address":"Carrefour de l'Europe, 1000 Bruxelles"},
+    {"id":"transport_antwerp","name":"Antwerpen-Centraal Station","category":"transport","lat":51.2174,"lng":4.4211,"address":"Koningin Astridplein 27, 2018 Antwerpen"},
+    {"id":"transport_liege","name":"Liège-Guillemins Station","category":"transport","lat":50.6244,"lng":5.5665,"address":"Place des Guillemins 2, 4000 Liège"}
+  ]
+}

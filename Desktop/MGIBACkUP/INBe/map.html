@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Essential Services Map — InBeas</title>
+  <link href="css/styles.css" rel="stylesheet" />
+  <style>
+    .services-panel{padding:26px 26px 34px}
+    .services-panel h2{margin:0 0 6px;font-size:24px}
+    .services-panel .panel-lead{margin:0 0 18px;color:var(--subtle);font-size:15px;line-height:1.5}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="grid-2 hero-split">
+          <div class="hero-copy">
+            <h1 class="hero-title">Essential <span class="highlight">Services</span></h1>
+            <p class="lead">Explore key public & daily‑life services across Belgium's three regions.</p>
+          </div>
+          <figure class="hero-illustration">
+            <img src="assets/inbeas-collage.svg" alt="Illustration of Belgium regions and services" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Dynamic Region Services Explorer -->
+    <section class="card-cluster" aria-labelledby="region-services-heading">
+      <div class="container">
+        <header class="cluster-header">
+          <h2 id="region-services-heading">Region service overview</h2>
+          <p class="cluster-lead">Each region differs slightly—open a region to view core service categories. Expand list for full entries.</p>
+        </header>
+  <div id="region-services" class="region-services-grid" aria-live="polite"></div>
+        <div id="services-full-list" hidden>
+          <h3 style="margin:28px 0 12px">All places <span id="list-region-label" class="tag" style="display:none"></span></h3>
+          <div id="services-list-wrapper" class="services-list-wrapper"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fine-print">© <span id="year"></span> InBeas.</p>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+  <script src="js/services-regions.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<svg width="400" height="320" viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Housing hub illustration</title>
+<desc id="desc">Stylised house with a key, document and eco elements representing leases, deposits and inspections.</desc>
+<!-- Ground line -->
+<line x1="40" y1="268" x2="360" y2="268" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round" />
+<!-- House shadow -->
+<ellipse cx="192" cy="270" rx="110" ry="18" fill="#0F172A" opacity="0.05" />
+<!-- House body -->
+<path d="M116 158l76-58 76 58v100a4 4 0 0 1-4 4H120a4 4 0 0 1-4-4V158z" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3" />
+<!-- Roof -->
+<path d="M104 160l88-68 88 68" fill="none" stroke="#16A34A" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" />
+<!-- Door -->
+<rect x="182" y="198" width="32" height="64" rx="2" fill="#22C55E" />
+<circle cx="205" cy="230" r="4" fill="#FFFFFF" />
+<!-- Window left -->
+<rect x="140" y="182" width="30" height="30" rx="3" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2" />
+<line x1="155" y1="182" x2="155" y2="212" stroke="#CBD5E1" stroke-width="2" />
+<line x1="140" y1="197" x2="170" y2="197" stroke="#CBD5E1" stroke-width="2" />
+<!-- Window right -->
+<rect x="226" y="182" width="30" height="30" rx="3" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="2" />
+<line x1="241" y1="182" x2="241" y2="212" stroke="#CBD5E1" stroke-width="2" />
+<line x1="226" y1="197" x2="256" y2="197" stroke="#CBD5E1" stroke-width="2" />
+<!-- Key -->
+<g transform="translate(280 116) rotate(18)">
+  <circle cx="22" cy="22" r="20" fill="#FFFFFF" stroke="#22C55E" stroke-width="4" />
+  <circle cx="22" cy="22" r="8" fill="#22C55E" />
+  <path d="M38 22h28l-4 8h-8l-3 6h-8" stroke="#22C55E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<!-- Document (inventory) -->
+<rect x="64" y="132" width="54" height="72" rx="6" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+<rect x="72" y="146" width="32" height="8" rx="4" fill="#CBD5E1" />
+<rect x="72" y="162" width="40" height="8" rx="4" fill="#E2E8F0" />
+<rect x="72" y="178" width="28" height="8" rx="4" fill="#E2E8F0" />
+<!-- Eco leaf for sustainable utilities -->
+<g transform="translate(250 82)">
+  <path d="M20 0c14 10 22 28 16 44-6 16-24 22-40 16-16-6-18-26-10-42C-2 8 8 2 20 0z" fill="#D1FAE5" />
+  <path d="M6 52c10-18 22-30 34-38" stroke="#059669" stroke-width="4" stroke-linecap="round" />
+</g>
+<!-- Accent circles -->
+<circle cx="326" cy="90" r="10" fill="#E0F2FE" />
+<circle cx="92" cy="244" r="8" fill="#FEE2E2" />
+<circle cx="312" cy="244" r="6" fill="#D1FAE5" />
+</svg>

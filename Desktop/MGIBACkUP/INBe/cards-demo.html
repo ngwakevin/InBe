@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Card System Demo — InBeas</title>
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card-cluster">
+      <div class="container">
+        <header class="cluster-header">
+          <h2 id="cluster-start">Start your journey</h2>
+          <p class="cluster-lead">Primary entry points + specialized sub‑flows you can expand later.</p>
+        </header>
+        <article class="card--primary" aria-labelledby="primary-onboarding">
+          <h3 id="primary-onboarding" class="card__title">Onboarding Checklist</h3>
+          <p class="card__desc">Core first‑weeks tasks: commune, health fund, banking, and utilities. Region‑aware foundation.</p>
+          <div class="card-row" role="list">
+            <a class="card--sub" role="listitem" href="#" data-status="new">
+              <span class="card-badge">NEW</span>
+              <img class="card__icon" src="assets/icon-onboarding.svg" alt="Commune" />
+              <h4 class="card__title">Commune Registration</h4>
+              <p class="card__desc">Book appointment, prepare documents, obtain residency attestation.</p>
+              <span class="card__cta">Open steps</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#">
+              <img class="card__icon" src="assets/icon-onboarding.svg" alt="Health" />
+              <h4 class="card__title">Health Insurance</h4>
+              <p class="card__desc">Select mutuality, enroll, order European Health card.</p>
+              <span class="card__cta">View tasks</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#">
+              <img class="card__icon" src="assets/icon-onboarding.svg" alt="Bank" />
+              <h4 class="card__title">Bank Account</h4>
+              <p class="card__desc">Compare basic accounts and activate online & debit.</p>
+              <span class="card__cta">Review steps</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#" data-status="soon">
+              <span class="card-badge">SOON</span>
+              <img class="card__icon" src="assets/icon-onboarding.svg" alt="Utilities" />
+              <h4 class="card__title">Utilities Setup</h4>
+              <p class="card__desc">Electricity, gas, water, mobile & internet activation.</p>
+              <span class="card__cta">Coming soon</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card--primary" style="margin-top:40px" aria-labelledby="primary-housing">
+          <h3 id="primary-housing" class="card__title">Housing Hub</h3>
+          <p class="card__desc">Understand leases, deposits, inspections, and move‑in formalities.</p>
+          <div class="card-row" role="list">
+            <a class="card--sub" role="listitem" href="#">
+              <img class="card__icon" src="assets/icon-housing.svg" alt="Lease" />
+              <h4 class="card__title">Lease Basics</h4>
+              <p class="card__desc">Types, durations, rights, and early termination rules.</p>
+              <span class="card__cta">Learn more</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#">
+              <img class="card__icon" src="assets/icon-housing.svg" alt="Deposit" />
+              <h4 class="card__title">Deposit & Inventory</h4>
+              <p class="card__desc">Blocked account vs bank guarantee; check‑in report tips.</p>
+              <span class="card__cta">View guidance</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#" data-status="soon">
+              <span class="card-badge">SOON</span>
+              <img class="card__icon" src="assets/icon-housing.svg" alt="Move-in" />
+              <h4 class="card__title">Move‑in Checklist</h4>
+              <p class="card__desc">Utilities readings, address updates, waste & insurance.</p>
+              <span class="card__cta">Coming soon</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fine-print">© <span id="year"></span> InBeas.</p>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

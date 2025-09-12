@@ -1,0 +1,15 @@
+<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flemish Region (windmill)">
+  <defs>
+    <style>
+      .bg{fill:#22C55E}
+      .fg{fill:#FFFFFF}
+    </style>
+  </defs>
+  <circle class="bg" cx="28" cy="28" r="24"/>
+  <g transform="translate(28,28)">
+    <rect class="fg" x="-3" y="-8" width="6" height="16" rx="1"/>
+    <rect class="fg" x="-18" y="-2" width="36" height="4" rx="2" transform="rotate(45)"/>
+    <rect class="fg" x="-18" y="-2" width="36" height="4" rx="2" transform="rotate(-45)"/>
+    <circle class="bg" cx="0" cy="0" r="2.5"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Walloon (castle)">
+  <defs>
+    <style>
+      .bg{fill:#22C55E}
+      .fg{fill:#FFFFFF}
+    </style>
+  </defs>
+  <circle class="bg" cx="28" cy="28" r="24"/>
+  <g transform="translate(28,30)">
+    <rect class="fg" x="-10" y="-6" width="20" height="14" rx="2"/>
+    <rect class="fg" x="-4" y="-12" width="8" height="6"/>
+    <rect x="-2" y="-12" width="4" height="6" fill="#16934a"/>
+    <rect x="-2.5" y="-2" width="5" height="10" fill="#16934a" rx="1"/>
+    <rect class="bg" x="-2" y="0" width="4" height="6" rx="1"/>
+    <rect class="bg" x="-6" y="-2" width="4" height="6" rx="1"/>
+    <rect class="bg" x="2" y="-2" width="4" height="6" rx="1"/>
+  </g>
+</svg>

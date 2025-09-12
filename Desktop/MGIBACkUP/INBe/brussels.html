@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brussels-Capital Region — InBeas</title>
+  <meta name="description" content="Brussels-Capital Region: bilingual hub, communes, services, tips, major communes overview." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="region-single brussels-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main class="page">
+    <section class="page-hero region-hero">
+      <div class="container region-hero-grid">
+        <div class="hero-region-text">
+          <h1 class="hero-title">Brussels-Capital Region</h1>
+          <div class="region-fact-cluster" aria-label="Regional statistics">
+            <p class="region-pop" data-pop="1200000" aria-label="Population approximately 1.2 million"><span class="pop-label">Population:</span> <span class="pop-prefix" aria-hidden="true">~</span><span class="pop-counter" data-target="1200000" data-abbr="true">0</span></p>
+            <ul class="region-facts" aria-label="Key facts">
+              <li data-variant="blue"><span class="label">19 communes</span></li>
+              <li data-variant="slate"><span class="label">Bilingual admin</span></li>
+              <li data-variant="amber"><span class="label">180+ nationalities</span></li>
+              <li data-variant="rose"><span class="label">EU & NATO hub</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-region-visual" aria-hidden="true">
+          <figure class="region-illustration-card in-hero">
+            <img src="assets/icon-brussels-atomium.svg" alt="Stylized Atomium icon representing Brussels" />
+            <figcaption>Brussels focus</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="page-section region-single-section">
+      <div class="container content-block region-layout">
+        <div class="region-text">
+          <p class="intro">The bilingual heart of Belgium and the EU with dense public transport, 19 communes, and highly international workforce.</p>
+          <div class="region-topics-row" data-region="brussels">
+            <button class="region-topic-card" data-topic="about"><span class="rtc-icon">ℹ️</span>About the Region<small>Languages & lifestyle</small></button>
+            <button class="region-topic-card" data-topic="services"><span class="rtc-icon">⚙️</span>Services & Admin<small>Key links</small></button>
+            <button class="region-topic-card" data-topic="tips"><span class="rtc-icon">💡</span>Tips for Newcomers<small>Quick wins</small></button>
+            <button class="region-topic-card" data-topic="cities"><span class="rtc-icon">🏙️</span>Major Communes<small>Local hubs</small></button>
+          </div>
+          <div class="region-detail-mount" id="detail-mount" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(){
+      const regionData = {
+        population:'~1.2M',facts:['19 communes','Bilingual admin','180+ nationalities','EU & NATO hub'],
+        topics:{
+          about:{title:'About Brussels-Capital Region',body:`<div class="about-block"><div class="about-grid">
+            <div class="about-item"><div class="about-icon">🌐</div><div class="about-content"><h4>Bilingual Core</h4><p>Officially French & Dutch; English widely used in professional and institutional contexts.</p></div></div>
+            <div class="about-item"><div class="about-icon">👥</div><div class="about-content"><h4>Diverse Population</h4><p>~1.2M residents representing 180+ nationalities; one of Europe’s most international urban hubs.</p></div></div>
+            <div class="about-item"><div class="about-icon">🏛️</div><div class="about-content"><h4>Institutional Hub</h4><p>Host to EU institutions, NATO, NGOs and corporate headquarters driving policy & innovation.</p></div></div>
+            <div class="about-item"><div class="about-icon">🚇</div><div class="about-content"><h4>Connected City</h4><p>Dense multimodal transport: metro, tram, bus & rail enable car‑light lifestyles.</p></div></div>
+            <div class="about-item"><div class="about-icon">💼</div><div class="about-content"><h4>Career Gateway</h4><p>International job market spanning diplomacy, tech, sustainability and services.</p></div></div>
+          </div><div class="about-highlights"><span class="badge-soft">Bilingual</span><span class="badge-soft">EU & NATO</span><span class="badge-soft">180+ Nationalities</span><span class="badge-soft">High Mobility</span></div></div>`},
+          services:{title:'Services & Administration',body:`<div class="info-feature-grid">
+              <div class="info-feature"><div class="info-icon">🗂️</div><h4>Registration</h4><p>EU: register at your commune within 90 days (if staying &gt; 90). Non‑EU: within 8 days (visa approval docs).</p></div>
+              <div class="info-feature"><div class="info-icon">🪪</div><h4>Key Documents</h4><p>ID/passport, rental contract, work or funds proof, health insurance policy, photos.</p></div>
+              <div class="info-feature"><div class="info-icon">🏥</div><h4>Healthcare</h4><p>Join mutualité / ziekenfonds; pick a GP and keep receipts for reimbursements.</p></div>
+              <div class="info-feature"><div class="info-icon">💳</div><h4>Bank & Finance</h4><p>Open a Belgian account for salary, rent & utilities; some employers require local IBAN.</p></div>
+              <div class="info-feature"><div class="info-icon">🚇</div><h4>Transport</h4><p>STIB/MIVB + SNCB/NMBS; passes + cycling reduce travel time & cost.</p></div>
+              <div class="info-feature"><div class="info-icon">♻️</div><h4>Setup</h4><p>Utilities, internet, mobile & strict waste sorting (colored bags) vary by commune.</p></div>
+            </div>`},
+          tips:{title:'Tips for Newcomers',body:`<div class="info-feature-grid">
+              <div class="info-feature"><div class="info-icon">🗣️</div><h4>Language</h4><p>Basic French or Dutch smooths admin; English sufficient professionally.</p></div>
+              <div class="info-feature"><div class="info-icon">🏠</div><h4>Housing</h4><p>Move fast; review lease (indexation, exit terms) before signing.</p></div>
+              <div class="info-feature"><div class="info-icon">🤝</div><h4>Networks</h4><p>Meetups, volunteering & exchanges accelerate integration.</p></div>
+              <div class="info-feature"><div class="info-icon">🚲</div><h4>Mobility</h4><p>Bike + metro faster than car at peak in many districts.</p></div>
+              <div class="info-feature"><div class="info-icon">💰</div><h4>Costs</h4><p>Budget for higher rent; use annual transit & meal prep to save.</p></div>
+              <div class="info-feature"><div class="info-icon">🧾</div><h4>Admin Flow</h4><p>Digitize documents; keep cloud backup for renewals.</p></div>
+            </div>`},
+          cities:{title:'Major Communes (Highlights)',body:`<div class="commune-grid">
+              <div class="commune-card"><h4>Ixelles</h4><p>Academic & expat mix; arts & ponds.</p></div>
+              <div class="commune-card"><h4>Etterbeek</h4><p>Near EU quarter; balanced residential feel.</p></div>
+              <div class="commune-card"><h4>Uccle</h4><p>Leafy, suburban, higher‑end housing.</p></div>
+              <div class="commune-card"><h4>Schaerbeek</h4><p>Diverse; emerging affordability pockets.</p></div>
+              <div class="commune-card"><h4>Woluwe</h4><p>Schools, green space & family focus.</p></div>
+              <div class="commune-card"><h4>City Core</h4><p>Historic centre, nightlife, student zones.</p></div>
+            </div>`}
+        }
+      };
+
+      function mountTopic(btn){
+        const topic = btn.getAttribute('data-topic');
+        const data = regionData.topics[topic];
+        if(!data) return;
+        document.querySelectorAll('.region-topic-card').forEach(b=>b.classList.toggle('active', b===btn));
+        const mount = document.getElementById('detail-mount');
+        mount.innerHTML = `<div class="region-detail-panel"><button class="close-detail" type="button">Close</button><h3>${data.title}</h3>${data.body}</div>`;
+        mount.querySelector('.close-detail').addEventListener('click', ()=>{ mount.innerHTML=''; document.querySelectorAll('.region-topic-card').forEach(b=>b.classList.remove('active')); });
+      }
+      document.querySelectorAll('.region-topic-card').forEach(btn=>btn.addEventListener('click', ()=>mountTopic(btn)));
+    })();
+  </script>
+  <script src="js/region-stats.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
