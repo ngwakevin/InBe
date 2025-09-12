@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pricing — InBeas</title>
+  <meta name="description" content="InBeas pricing plans: choose the membership that fits your relocation journey." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="pricing-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+        <a href="resources.html">Resources</a>
+        <a class="active" href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main class="page">
+  <section class="pricing-hero dual plain">
+      <div class="container pricing-hero-inner">
+        <div class="hero-side hero-left" aria-hidden="true">
+          <figure class="hero-figure">
+            <img src="assets/students.svg" width="320" height="320" decoding="async" fetchpriority="high" alt="Relocating students" />
+          </figure>
+        </div>
+        <div class="pricing-hero-center">
+          <h1>Discover the InBeas plans</h1>
+          <p class="lead">Choose the membership that fits your relocation stage. Switch or cancel anytime.</p>
+          <div class="billing-switch" data-cycle="monthly" aria-label="Billing period" role="group">
+            <button class="billing-label active" data-cycle="monthly" type="button" aria-pressed="true">Monthly</button>
+            <button class="billing-toggle" type="button" role="switch" aria-checked="false" aria-label="Toggle annual billing">
+              <span class="knob" aria-hidden="true"></span>
+            </button>
+            <button class="billing-label" data-cycle="annual" type="button" aria-pressed="false">Annual <span class="save">Save 15%</span></button>
+          </div>
+        </div>
+        <div class="hero-side hero-right" aria-hidden="true">
+          <figure class="hero-figure alt">
+            <img src="assets/families.svg" width="320" height="320" loading="lazy" decoding="async" alt="Relocating families" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="page-section pricing-section">
+      <div class="container">
+        <div class="pricing-grid" id="pricing-grid" data-cycle="monthly">
+          <div class="plan-card" data-plan="free">
+            <div class="plan-head">
+              <h3>Starter</h3>
+              <p class="tagline">Essentials to begin</p>
+            </div>
+            <p class="price" data-monthly="€0" data-annual="€0">€0</p>
+            <p class="billing-note">Forever free</p>
+            <ul class="feature-list">
+              <li>Core relocation checklists</li>
+              <li>Public region guides</li>
+              <li>Basic tips & FAQs</li>
+            </ul>
+            <button class="btn-plan primary" type="button">Get Started</button>
+          </div>
+          <div class="plan-card highlighted" data-plan="plus">
+            <div class="plan-badge">Popular</div>
+            <div class="plan-head">
+              <h3>Plus</h3>
+              <p class="tagline">Deeper local insight</p>
+            </div>
+            <p class="price" data-monthly="€9" data-annual="€8">€9</p>
+            <p class="billing-note">per month</p>
+            <ul class="feature-list">
+              <li>All Starter features</li>
+              <li>City & commune deep-dives</li>
+              <li>Financial & housing mini-guides</li>
+              <li>Email support (48h)</li>
+            </ul>
+            <button class="btn-plan accent" type="button">Upgrade</button>
+          </div>
+          <div class="plan-card" data-plan="pro">
+            <div class="plan-head">
+              <h3>Pro</h3>
+              <p class="tagline">For power planners</p>
+            </div>
+            <p class="price" data-monthly="€18" data-annual="€15">€18</p>
+            <p class="billing-note">per month</p>
+            <ul class="feature-list">
+              <li>All Plus features</li>
+              <li>Document prep & templates</li>
+              <li>Priority support (24h)</li>
+              <li>Quarterly live Q&A</li>
+            </ul>
+            <button class="btn-plan primary" type="button">Choose Pro</button>
+          </div>
+          <div class="plan-card" data-plan="org">
+            <div class="plan-head">
+              <h3>Organization</h3>
+              <p class="tagline">Teams & relocation cohorts</p>
+            </div>
+            <p class="price variable" data-monthly="Custom" data-annual="Custom">Custom</p>
+            <p class="billing-note">Contact us</p>
+            <ul class="feature-list">
+              <li>All Pro features</li>
+              <li>Onboarding workshops</li>
+              <li>Dedicated success channel</li>
+              <li>Custom knowledge base</li>
+            </ul>
+            <button class="btn-plan outline" type="button">Talk to us</button>
+          </div>
+        </div>
+        <p class="small-disclaimer">Prices in EUR. Taxes may apply. Cancel anytime. Annual pricing reflects effective monthly rate after discount.</p>
+      </div>
+    </section>
+    <section class="page-section feature-matrix-section">
+      <div class="container">
+        <h2 class="section-title">Compare features</h2>
+        <div class="matrix-scroll" role="region" aria-label="Feature comparison table">
+          <table class="feature-matrix" aria-describedby="matrix-note">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Starter</th>
+                <th scope="col">Plus</th>
+                <th scope="col">Pro</th>
+                <th scope="col">Org</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Core checklists</th>
+                <td class="yes"></td><td class="yes"></td><td class="yes"></td><td class="yes"></td>
+              </tr>
+              <tr>
+                <th scope="row">Commune deep-dives</th>
+                <td class="no"></td><td class="yes"></td><td class="yes"></td><td class="yes"></td>
+              </tr>
+              <tr>
+                <th scope="row">Housing mini-guides</th>
+                <td class="no"></td><td class="yes"></td><td class="yes"></td><td class="yes"></td>
+              </tr>
+              <tr>
+                <th scope="row">Document templates</th>
+                <td class="no"></td><td class="no"></td><td class="yes"></td><td class="yes"></td>
+              </tr>
+              <tr>
+                <th scope="row">Support response SLA</th>
+                <td>Community</td><td>48h</td><td>24h</td><td>Dedicated</td>
+              </tr>
+              <tr>
+                <th scope="row">Live Q&A sessions</th>
+                <td class="no"></td><td class="no"></td><td>Quarterly</td><td>Custom</td>
+              </tr>
+              <tr>
+                <th scope="row">Team dashboard</th>
+                <td class="no"></td><td class="no"></td><td class="no"></td><td class="yes"></td>
+              </tr>
+              <tr>
+                <th scope="row">Custom knowledge base</th>
+                <td class="no"></td><td class="no"></td><td class="no"></td><td class="yes"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p id="matrix-note" class="matrix-note">Feature availability may evolve as we release roadmap items.</p>
+      </div>
+    </section>
+    <section class="page-section addons-section">
+      <div class="container">
+        <div class="addons-header">
+          <h2 class="section-title">Add‑ons</h2>
+          <p class="section-sub">Enhance any plan with specialist support.</p>
+        </div>
+        <div class="addons-grid">
+          <div class="addon-card"><img class="addon-img" src="assets/onboarding-checklist.svg" alt="Consult" loading="lazy" /><h3>1:1 Consult</h3><p>30‑minute personalised relocation session.</p><span class="addon-tag">€45</span></div>
+          <div class="addon-card"><img class="addon-img" src="assets/housing-hub.svg" alt="Housing scan" loading="lazy" /><h3>Housing Scan</h3><p>Review of up to 5 listings with risk flags.</p><span class="addon-tag">€60</span></div>
+          <div class="addon-card"><img class="addon-img" src="assets/icon-onboarding.svg" alt="Document pre-check" loading="lazy" /><h3>Document Pre‑check</h3><p>Validation before submission to reduce delays.</p><span class="addon-tag">€35</span></div>
+          <div class="addon-card"><img class="addon-img" src="assets/expert-work.svg" alt="Tax orientation" loading="lazy" /><h3>Tax Orientation</h3><p>Intro session on Belgian basics & filings.</p><span class="addon-tag">€70</span></div>
+        </div>
+        <div class="addons-cta-row">
+          <a class="addons-link" href="#" aria-label="See all add-ons">See all add-ons →</a>
+        </div>
+      </div>
+    </section>
+    <section class="page-section faq-section">
+      <div class="container">
+        <h2 class="section-title">Pricing FAQ</h2>
+        <div class="faq-accordion" role="region" aria-label="Frequently asked questions">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I switch plans later?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a" hidden><p>Yes, upgrades apply instantly with proration and downgrades at the next cycle.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Is VAT included?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a" hidden><p>Prices shown exclude VAT. Applicable taxes are added at checkout.</p></div>
+          </div>
+            <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do you offer refunds?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a" hidden><p>Monthly plans are cancel-anytime. Annual plans include a 14‑day refund window.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What happens if I cancel?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a" hidden><p>Your account reverts to Starter at the end of the billing period; data remains accessible.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How does the Organization plan work?<span class="faq-icon" aria-hidden="true"></span></button>
+            <div class="faq-a" hidden><p>We tailor seats, onboarding, and success metrics; contact us for a custom quote.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Billing switch (monthly <-> annual)
+    (function(){
+      const switchEl=document.querySelector('.billing-switch');
+      if(!switchEl) return;
+      const grid=document.getElementById('pricing-grid');
+      const labels=[...switchEl.querySelectorAll('.billing-label')];
+      const toggleBtn=switchEl.querySelector('.billing-toggle');
+      const prices=[...grid.querySelectorAll('.price')];
+      function applyCycle(cycle){
+        switchEl.dataset.cycle=cycle;grid.dataset.cycle=cycle;
+        labels.forEach(l=>{const active=l.dataset.cycle===cycle;l.classList.toggle('active',active);l.setAttribute('aria-pressed',active)});
+        toggleBtn.setAttribute('aria-checked',cycle==='annual');
+        prices.forEach(p=>{const val=p.getAttribute(`data-${cycle}`);if(!val)return;p.textContent=val;p.nextElementSibling.textContent= val==='€0'||val==='Custom'?(val==='Custom'?'Contact us':'Forever free'):(cycle==='monthly'?'per month':'per month (annual)');});
+      }
+      labels.forEach(l=>l.addEventListener('click',()=>applyCycle(l.dataset.cycle)));
+      toggleBtn.addEventListener('click',()=>applyCycle(switchEl.dataset.cycle==='monthly'?'annual':'monthly'));
+    })();
+    // FAQ accordion (accessible)
+    (function(){
+      const items=[...document.querySelectorAll('.faq-item')];
+      items.forEach(item=>{
+        const btn=item.querySelector('.faq-q');
+        const panel=item.querySelector('.faq-a');
+        btn.addEventListener('click',()=>{
+          const expanded=btn.getAttribute('aria-expanded')==='true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if(expanded){panel.hidden=true;}else{panel.hidden=false;}
+        });
+      });
+    })();
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>

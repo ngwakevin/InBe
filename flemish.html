@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flemish Region — InBeas</title>
+  <meta name="description" content="Flanders: Dutch-speaking region overview, services, tips, major cities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="region-single flemish-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main class="page">
+    <section class="page-hero region-hero">
+      <div class="container region-hero-grid">
+        <div class="hero-region-text">
+          <h1 class="hero-title">Flemish Region</h1>
+          <div class="region-fact-cluster" aria-label="Regional statistics">
+            <p class="region-pop" data-pop="6700000" aria-label="Population approximately 6.7 million"><span class="pop-label">Population:</span> <span class="pop-prefix" aria-hidden="true">~</span><span class="pop-counter" data-target="6700000" data-abbr="true">0</span></p>
+            <ul class="region-facts" aria-label="Key facts">
+              <li data-variant="amber"><span class="label">5 provinces</span></li>
+              <li data-variant="blue"><span class="label">Dutch language</span></li>
+              <li data-variant="slate"><span class="label">Innovation hub</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-region-visual" aria-hidden="true">
+          <figure class="region-illustration-card in-hero">
+            <img src="assets/icon-flemish-windmill.svg" alt="Flemish region symbolic windmill" />
+            <figcaption>Flemish focus</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="page-section region-single-section">
+      <div class="container content-block region-layout">
+        <div class="region-text">
+          <p class="intro">Dutch‑speaking region with strong innovation, logistics hubs, and structured civic integration pathways.</p>
+          <div class="region-topics-row" data-region="flemish">
+            <button class="region-topic-card" data-topic="about"><span class="rtc-icon">ℹ️</span>About the Region<small>Language & culture</small></button>
+            <button class="region-topic-card" data-topic="services"><span class="rtc-icon">⚙️</span>Services & Admin<small>Key links</small></button>
+            <button class="region-topic-card" data-topic="tips"><span class="rtc-icon">💡</span>Tips for Newcomers<small>Integration</small></button>
+            <button class="region-topic-card" data-topic="cities"><span class="rtc-icon">🏙️</span>Major Cities<small>Urban hubs</small></button>
+          </div>
+          <div class="region-detail-mount" id="detail-mount" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(){
+      const regionData = {
+        population:'~6.7M',facts:['5 provinces','Dutch language','Innovation hub'],
+        topics:{
+          about:{title:'About Flemish Region',body:`<div class="about-block"><div class="about-grid">
+            <div class="about-item"><div class="about-icon">🗣️</div><div class="about-content"><h4>Dutch-Speaking</h4><p>Primary language is Dutch; English common in business & research.</p></div></div>
+            <div class="about-item"><div class="about-icon">👥</div><div class="about-content"><h4>Population ~6.7M</h4><p>Network of vibrant cities & connected historic towns.</p></div></div>
+            <div class="about-item"><div class="about-icon">⚓</div><div class="about-content"><h4>Strong Economy</h4><p>Port of Antwerp, industry, logistics & innovation clusters.</p></div></div>
+            <div class="about-item"><div class="about-icon">🏙️</div><div class="about-content"><h4>Urban Mix</h4><p>Antwerp & Ghent energy; Bruges & Leuven heritage & academia.</p></div></div>
+            <div class="about-item"><div class="about-icon">🚲</div><div class="about-content"><h4>Cycling Culture</h4><p>Efficient infrastructure & multimodal commuting.</p></div></div>
+            <div class="about-item"><div class="about-icon">💼</div><div class="about-content"><h4>Employment Hub</h4><p>Diverse opportunities in tech, research & services.</p></div></div>
+          </div><div class="about-highlights"><span class="badge-soft">Dutch</span><span class="badge-soft">Innovation</span><span class="badge-soft">Cycling</span><span class="badge-soft">High Employment</span></div></div>`},
+          services:{title:'Services & Administration',body:`<div class="info-feature-grid">
+            <div class="info-feature"><div class="info-icon">🗂️</div><h4>Registration</h4><p>EU: within 90 days if stay &gt; 90. Non‑EU: within 8 days (visa docs).</p></div>
+            <div class="info-feature"><div class="info-icon">📄</div><h4>Documents</h4><p>ID/passport, rental contract, work/student contract, insurance proof.</p></div>
+            <div class="info-feature"><div class="info-icon">🏥</div><h4>Healthcare</h4><p>Join a mutualiteit & choose a huisarts (GP).</p></div>
+            <div class="info-feature"><div class="info-icon">🚌</div><h4>Transport</h4><p>De Lijn + SNCB + cycling covers most commutes efficiently.</p></div>
+            <div class="info-feature"><div class="info-icon">⚡</div><h4>Utilities</h4><p>Set up energy (Fluvius) & waste sorting (strict rules).</p></div>
+            <div class="info-feature"><div class="info-icon">🏢</div><h4>Economy</h4><p>Anchored by Antwerp port, R&D corridors & manufacturing SMEs.</p></div>
+          </div>`},
+          tips:{title:'Tips for Newcomers',body:`<div class="info-feature-grid">
+            <div class="info-feature"><div class="info-icon">🗣️</div><h4>Dutch Key</h4><p>Language opens professional & social doors—start early.</p></div>
+            <div class="info-feature"><div class="info-icon">🏠</div><h4>Housing</h4><p>Cheaper than Brussels overall; tight demand in Ghent & Leuven.</p></div>
+            <div class="info-feature"><div class="info-icon">⏱️</div><h4>Punctuality</h4><p>On-time culture in work & civic services.</p></div>
+            <div class="info-feature"><div class="info-icon">🚲</div><h4>Bike Investment</h4><p>Quality lock, lights & rain gear recommended.</p></div>
+            <div class="info-feature"><div class="info-icon">🎓</div><h4>Academic Pull</h4><p>Research centers attract internationals—network early.</p></div>
+            <div class="info-feature"><div class="info-icon">🤝</div><h4>Direct Style</h4><p>Expect concise feedback; not impolite—just efficient.</p></div>
+          </div>`},
+          cities:{title:'Major Cities',body:`<div class="commune-grid">
+            <div class="commune-card"><h4>Antwerp</h4><p>Port, fashion & finance hub.</p></div>
+            <div class="commune-card"><h4>Ghent</h4><p>Student city, culture & tech.</p></div>
+            <div class="commune-card"><h4>Bruges</h4><p>Historic, tourism, quieter expat scene.</p></div>
+            <div class="commune-card"><h4>Leuven</h4><p>University & research focus.</p></div>
+            <div class="commune-card"><h4>Mechelen</h4><p>Family-friendly & well connected.</p></div>
+          </div>`}
+        }
+      };
+      function mountTopic(btn){
+        const topic = btn.getAttribute('data-topic');
+        const data = regionData.topics[topic];
+        if(!data) return;
+        document.querySelectorAll('.region-topic-card').forEach(b=>b.classList.toggle('active', b===btn));
+        const mount = document.getElementById('detail-mount');
+        mount.innerHTML = `<div class=\"region-detail-panel\"><button class=\"close-detail\" type=\"button\">Close</button><h3>${data.title}</h3>${data.body}</div>`;
+        mount.querySelector('.close-detail').addEventListener('click', ()=>{ mount.innerHTML=''; document.querySelectorAll('.region-topic-card').forEach(b=>b.classList.remove('active')); });
+      }
+      document.querySelectorAll('.region-topic-card').forEach(btn=>btn.addEventListener('click', ()=>mountTopic(btn)));
+    })();
+  </script>
+  <script src="js/region-stats.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

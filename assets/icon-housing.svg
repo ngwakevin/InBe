@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Housing">
+  <path d="M10 30 L32 14 L54 30" stroke="#22c55e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="16" y="28" width="32" height="24" rx="4" stroke="#22c55e" stroke-width="3" fill="white"/>
+  <rect x="28" y="36" width="8" height="16" rx="2" stroke="#22c55e" stroke-width="3" fill="#ffffff"/>
+  <circle cx="32" cy="46" r="1.5" fill="#22c55e"/>
+</svg>

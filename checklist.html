@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Onboarding Checklist — InBeas</title>
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="grid-2 hero-split">
+          <div class="hero-copy">
+            <h1 class="hero-title">Onboarding <span class="highlight">Checklist</span></h1>
+            <p class="lead">Core first‑weeks tasks from registration to health, banking and utilities.</p>
+          </div>
+          <figure class="hero-illustration">
+            <img src="assets/onboarding-checklist.svg" alt="Person viewing a large onboarding checklist with completed steps" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Hierarchical card cluster -->
+    <section class="card-cluster" aria-labelledby="onboard-heading">
+      <div class="container">
+        <header class="cluster-header">
+          <h2 id="onboard-heading">Get set up</h2>
+          <p class="cluster-lead">Work through these foundations. Region filtering & progress tracking coming soon.</p>
+        </header>
+        <!-- Primary card wrapper -->
+        <article class="card--primary" aria-labelledby="primary-onboarding-title">
+          <h3 id="primary-onboarding-title" class="card__title">Onboarding Core</h3>
+          <p class="card__desc">Tackle these first to unlock stability: address, healthcare, finances and home basics.</p>
+          <div id="onboarding-subcards" class="card-row" role="list" aria-live="polite"></div>
+        </article>
+      </div>
+    </section>
+    <!-- Data driven task groups (placeholder for future detailed steps) -->
+    <section class="page-section alt" aria-labelledby="detail-heading">
+      <div class="container">
+        <h2 id="detail-heading" style="margin-top:0">Detailed task flows</h2>
+        <p class="lead" style="max-width:60ch">Soon you'll be able to expand a task for a sequenced, checkable flow (documents, fees, timing, forms). For now we list high‑level modules above.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fine-print">© <span id="year"></span> InBeas.</p>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+  <script src="js/checklist.js"></script>
+</body>
+</html>

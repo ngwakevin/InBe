@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Walloon Region — InBeas</title>
+  <meta name="description" content="Wallonia: French-speaking region overview, services, tips, major cities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="region-single walloon-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+        <a href="services.html">Services</a>
+        <div class="region-menu-wrapper">
+          <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+          <div class="region-panel" role="menu" aria-label="Select region">
+            <button class="close-region" type="button">Close</button>
+            <h4>Choose a region</h4>
+            <ul class="region-links">
+              <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+              <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+              <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main class="page">
+    <section class="page-hero region-hero">
+      <div class="container region-hero-grid">
+        <div class="hero-region-text">
+          <h1 class="hero-title">Walloon Region</h1>
+          <div class="region-fact-cluster" aria-label="Regional statistics">
+            <p class="region-pop" data-pop="3600000" aria-label="Population approximately 3.6 million"><span class="pop-label">Population:</span> <span class="pop-prefix" aria-hidden="true">~</span><span class="pop-counter" data-target="3600000" data-abbr="true">0</span></p>
+            <ul class="region-facts" aria-label="Key facts">
+              <li data-variant="amber"><span class="label">5 provinces</span></li>
+              <li data-variant="rose"><span class="label">French language</span></li>
+              <li data-variant="slate"><span class="label">Green landscapes</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-region-visual" aria-hidden="true">
+          <figure class="region-illustration-card in-hero">
+            <img src="assets/icon-walloon-castle.svg" alt="Walloon region symbolic castle" />
+            <figcaption>Walloon focus</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="page-section region-single-section">
+      <div class="container content-block region-layout">
+        <div class="region-text">
+          <p class="intro">French‑speaking south with broader geography, green space, and evolving transport links between industrial and rural zones.</p>
+          <div class="region-topics-row" data-region="walloon">
+            <button class="region-topic-card" data-topic="about"><span class="rtc-icon">ℹ️</span>About the Region<small>Language & lifestyle</small></button>
+            <button class="region-topic-card" data-topic="services"><span class="rtc-icon">⚙️</span>Services & Admin<small>Gov & daily</small></button>
+            <button class="region-topic-card" data-topic="tips"><span class="rtc-icon">💡</span>Tips for Newcomers<small>Adapt faster</small></button>
+            <button class="region-topic-card" data-topic="cities"><span class="rtc-icon">🏙️</span>Major Cities<small>Regional hubs</small></button>
+          </div>
+          <div class="region-detail-mount" id="detail-mount" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(){
+      const regionData = {
+        population:'~3.6M',facts:['5 provinces','French language','Green landscapes'],
+        topics:{
+          about:{title:'About Walloon Region',body:`<div class="about-block"><div class="about-grid">
+            <div class="about-item"><div class="about-icon">🗣️</div><div class="about-content"><h4>French-Speaking</h4><p>Primarily French; small German-speaking community in the east.</p></div></div>
+            <div class="about-item"><div class="about-icon">👥</div><div class="about-content"><h4>Population ~3.6M</h4><p>Cities & rural areas with wider green space.</p></div></div>
+            <div class="about-item"><div class="about-icon">🏭</div><div class="about-content"><h4>Industrial Past</h4><p>Shifting toward services, research & tech diversification.</p></div></div>
+            <div class="about-item"><div class="about-icon">🌿</div><div class="about-content"><h4>Green & Outdoor</h4><p>Ardennes, trails, rivers & heritage castles.</p></div></div>
+            <div class="about-item"><div class="about-icon">🕰️</div><div class="about-content"><h4>Slower Pace</h4><p>More relaxed lifestyle vs. Brussels/Flanders.</p></div></div>
+          </div><div class="about-highlights"><span class="badge-soft">French</span><span class="badge-soft">Green</span><span class="badge-soft">Heritage</span><span class="badge-soft">Outdoor</span></div></div>`},
+          services:{title:'Services & Administration',body:`<div class="info-feature-grid">
+            <div class="info-feature"><div class="info-icon">🗂️</div><h4>Registration</h4><p>EU: within 90 days if stay &gt; 90. Non‑EU: within 8 days; possible home check.</p></div>
+            <div class="info-feature"><div class="info-icon">📄</div><h4>Documents</h4><p>ID/passport, rental contract, work/financial proof, insurance.</p></div>
+            <div class="info-feature"><div class="info-icon">🏥</div><h4>Healthcare</h4><p>Join mutualité; pick médecin généraliste early (rural slots limited).</p></div>
+            <div class="info-feature"><div class="info-icon">🚌</div><h4>Transport</h4><p>TEC buses + SNCB; rural frequency lower—plan ahead.</p></div>
+            <div class="info-feature"><div class="info-icon">⌛</div><h4>Processing</h4><p>Admin may be slower—start formalities early.</p></div>
+            <div class="info-feature"><div class="info-icon">🚗</div><h4>Mobility</h4><p>Car often useful outside major hubs; supplement with sharing.</p></div>
+          </div>`},
+          tips:{title:'Tips for Newcomers',body:`<div class="info-feature-grid">
+            <div class="info-feature"><div class="info-icon">🗣️</div><h4>French Essential</h4><p>English less common beyond large cities.</p></div>
+            <div class="info-feature"><div class="info-icon">💶</div><h4>Lower Living Costs</h4><p>Housing & daily spend generally lower—improves quality.</p></div>
+            <div class="info-feature"><div class="info-icon">🏡</div><h4>More Space</h4><p>Expect larger homes; weigh against commute time.</p></div>
+            <div class="info-feature"><div class="info-icon">🚗</div><h4>Own/Share Car</h4><p>Improves access to rural services & nature.</p></div>
+            <div class="info-feature"><div class="info-icon">👨‍👩‍👧</div><h4>Family Focus</h4><p>Community & family activities define local rhythm.</p></div>
+            <div class="info-feature"><div class="info-icon">🤝</div><h4>Integrate Locally</h4><p>Join clubs, outdoor groups & cultural associations.</p></div>
+          </div>`},
+          cities:{title:'Major Cities',body:`<div class="commune-grid">
+            <div class="commune-card"><h4>Liège</h4><p>Lively; industrial heritage & students.</p></div>
+            <div class="commune-card"><h4>Namur</h4><p>Capital & administrative hub.</p></div>
+            <div class="commune-card"><h4>Mons</h4><p>Cultural; near France & EU links.</p></div>
+            <div class="commune-card"><h4>Charleroi</h4><p>Evolving post‑industrial centre.</p></div>
+            <div class="commune-card"><h4>Arlon</h4><p>Luxembourg cross‑border workers.</p></div>
+          </div>`}
+        }
+      };
+      function mountTopic(btn){
+        const topic = btn.getAttribute('data-topic');
+        const data = regionData.topics[topic];
+        if(!data) return;
+        document.querySelectorAll('.region-topic-card').forEach(b=>b.classList.toggle('active', b===btn));
+        const mount = document.getElementById('detail-mount');
+        mount.innerHTML = `<div class=\"region-detail-panel\"><button class=\"close-detail\" type=\"button\">Close</button><h3>${data.title}</h3>${data.body}</div>`;
+        mount.querySelector('.close-detail').addEventListener('click', ()=>{ mount.innerHTML=''; document.querySelectorAll('.region-topic-card').forEach(b=>b.classList.remove('active')); });
+      }
+      document.querySelectorAll('.region-topic-card').forEach(btn=>btn.addEventListener('click', ()=>mountTopic(btn)));
+    })();
+  </script>
+  <script src="js/region-stats.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

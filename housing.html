@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Housing — InBeas</title>
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body class="housing-page">
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">InBeas</a>
+      <nav id="primary-nav" class="site-nav" aria-label="Primary">
+  <a href="services.html">Services</a>
+  <div class="region-menu-wrapper">
+    <a href="#" class="region-trigger" aria-haspopup="true" aria-expanded="false">Region</a>
+    <div class="region-panel" role="menu" aria-label="Select region">
+      <button class="close-region" type="button">Close</button>
+      <h4>Choose a region</h4>
+      <ul class="region-links">
+  <li><a data-region="brussels" href="brussels.html">Brussels <span class="hint">Bilingual hub</span></a></li>
+  <li><a data-region="flemish" href="flemish.html">Flanders <span class="hint">Dutch focus</span></a></li>
+  <li><a data-region="walloon" href="walloon.html">Wallonia <span class="hint">French focus</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <a href="guides.html">Guides</a>
+  <a href="resources.html">Resources</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="about.html">About</a>
+  <a class="cta" href="join.html">Join InBeas</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero housing-hero">
+      <div class="container">
+        <div class="grid-2 hero-split">
+          <div class="hero-copy">
+            <h1 class="hero-title">Housing <span class="highlight">Hub</span></h1>
+            <p class="lead">Understand the Belgian renting landscape: leases, deposits, inspections and move‑in formalities.</p>
+          </div>
+          <figure class="hero-illustration">
+            <img src="assets/housing-hub.svg" alt="Stylised house with key, document and leaf representing leasing and move-in" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- Housing Hub cards (simplified panel style) -->
+    <section class="card-cluster" aria-labelledby="housing-hub-heading">
+      <div class="container">
+        <article class="card--primary housing-panel" aria-labelledby="housing-hub-heading">
+          <header class="panel-header">
+            <h2 id="housing-hub-heading">Housing Hub</h2>
+            <p class="panel-lead">Understand leases, deposits, inspections, and move‑in formalities.</p>
+          </header>
+          <div class="card-row" role="list">
+            <a class="card--sub" role="listitem" href="#lease-basics" aria-label="Lease basics guidance">
+              <img class="card__icon" src="assets/icon-housing.svg" alt="Lease" />
+              <h4 class="card__title">Lease Basics</h4>
+              <p class="card__desc">Types, durations, rights, and early termination rules.</p>
+              <span class="card__cta">Learn more</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#deposit" aria-label="Deposit and inventory guidance">
+              <img class="card__icon" src="assets/icon-housing.svg" alt="Deposit" />
+              <h4 class="card__title">Deposit & Inventory</h4>
+              <p class="card__desc">Blocked account vs bank guarantee; check‑in report tips.</p>
+              <span class="card__cta">View guidance</span>
+            </a>
+            <a class="card--sub" role="listitem" href="#move-in" data-status="soon" aria-label="Move-in checklist coming soon">
+              <span class="card-badge">SOON</span>
+              <img class="card__icon" src="assets/icon-housing.svg" alt="Move-in" />
+              <h4 class="card__title">Move‑in Checklist</h4>
+              <p class="card__desc">Utilities readings, address updates, waste & insurance.</p>
+              <span class="card__cta">Coming soon</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p class="fine-print">© <span id="year"></span> InBeas.</p>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
