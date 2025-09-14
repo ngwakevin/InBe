@@ -295,7 +295,7 @@ input,select,textarea{background:#ffffff;color:#0f172a;border:1px solid var(--bo
 .addon-img{width:48px;height:auto;display:block}
 .pricing-section{padding:40px 0 80px}
 .pricing-grid{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}
-.plan-card{position:relative;background:linear-gradient(145deg,#ffffff 0%,#f8fafc 120%);border:1px solid #e2e8f0;border-radius:26px;padding:28px 26px 30px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 34px -12px rgba(15,23,42,.18),0 4px 10px -4px rgba(15,23,42,.08);transition:.4s cubic-bezier(.4,.6,.2,1);overflow:hidden}
+.plan-card{position:relative;background:linear-gradient(145deg,#ffffff 0%,#f8fafc 120%);border:1px solid #e2e8f0;border-radius:26px;padding:28px 26px 30px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 34px -12px rgba(15,23,42,.18),0 4px 10px -4px rgba(15,23,42,.08);transition:.4s cubic-bezier(.4,.6,.2,1);overflow:hidden;z-index:1}
 .plan-card::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 20%,rgba(16,185,129,.18),transparent 60%);opacity:0;transition:.6s;pointer-events:none}
 .plan-card:hover{transform:translateY(-8px);box-shadow:0 28px 60px -16px rgba(15,23,42,.25)}
 .plan-card:hover::after{opacity:1}
@@ -310,7 +310,7 @@ input,select,textarea{background:#ffffff;color:#0f172a;border:1px solid var(--bo
 .feature-list li{position:relative;padding-left:22px;line-height:1.45}
 .feature-list li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;border-radius:4px;background:linear-gradient(135deg,var(--brand),#16a34a);box-shadow:0 2px 6px -2px rgba(16,185,129,.6)}
 .plan-card.highlighted .feature-list li::before{background:linear-gradient(135deg,#0891b2,#2563eb)}
-.btn-plan{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;gap:6px;padding:12px 18px;font-size:14px;font-weight:600;border-radius:14px;border:1px solid #0f766e;background:#0f766e;color:#fff;cursor:pointer;letter-spacing:.4px;transition:.35s}
+.btn-plan{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;gap:6px;padding:12px 18px;font-size:14px;font-weight:600;border-radius:14px;border:1px solid #0f766e;background:#0f766e;color:#fff;cursor:pointer;letter-spacing:.4px;transition:.35s;position:relative;z-index:2}
 .btn-plan.primary{background:#2563eb;border-color:#2563eb}
 .btn-plan.accent{background:var(--brand);border-color:var(--brand)}
 .btn-plan.outline{background:#ffffff;color:#0f172a;border-color:#cbd5e1}
