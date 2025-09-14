@@ -4,24 +4,37 @@
 (function(){
   const MSAL_CDN = 'https://alcdn.msauth.net/browser/2.38.0/js/msal-browser.min.js';
   let _attempts = 0;
-  const MAX_ATTEMPTS = 30; // ~3s at 100ms
+  const MAX_ATTEMPTS = 100; // up to ~10s at 100ms
 
   function loadScript(src){
     return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.async=true;s.onload=resolve;s.onerror=reject;document.head.appendChild(s);});
   }
 
   async function init(){
-  if(typeof msalConfig === 'undefined') {
-    if(_attempts===0) console.warn('[auth] msalConfig not defined yet; polling...');
+  const cfg = (typeof msalConfig !== 'undefined') ? msalConfig : (window.msalConfig || undefined);
+  if(!cfg){
+    if(_attempts === 0) console.warn('[auth] msalConfig not defined yet; polling...');
+    // If script tag for auth-config is missing, inject it
+    if(!_attempts){
+      const present = !!document.querySelector('script[src*="auth-config.js"]');
+      if(!present){
+        const s=document.createElement('script');
+        s.src='js/auth-config.js?v=auto';
+        s.async=true;
+        s.onload=()=>{ console.log('[auth] dynamically loaded auth-config.js'); };
+        s.onerror=()=>{ console.error('[auth] failed to load injected auth-config.js'); };
+        document.head.appendChild(s);
+      }
+    }
     if(_attempts++ < MAX_ATTEMPTS){
       return setTimeout(init, 100);
     } else {
-      console.error('[auth] msalConfig still missing after retries. auth-config.js failed to load?');
+      console.error('[auth] msalConfig still missing after retries (~10s). Aborting auth bootstrap.');
       return;
     }
   }
   if(!window.msal){await loadScript(MSAL_CDN);}    
-  const msalInstance = new msal.PublicClientApplication(msalConfig);
+  const msalInstance = new msal.PublicClientApplication(cfg);
 
     // Handle redirect response if any
     try { await msalInstance.handleRedirectPromise(); } catch(e){ console.error('[auth] redirect error', e); }
@@ -86,7 +99,7 @@
         console.log('[auth] plan button clicked ->', plan);
         localStorage.setItem('inbe_pending_plan', plan);
     // Use the configured authority (user flow) explicitly
-    await msalInstance.loginPopup({ ...loginRequest, authority: msalConfig.auth.authority });
+  await msalInstance.loginPopup({ ...loginRequest, authority: cfg.auth.authority });
         const pending = localStorage.getItem('inbe_pending_plan');
         if(pending){ setStoredPlan(pending); localStorage.removeItem('inbe_pending_plan'); }
         render();
