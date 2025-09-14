@@ -268,9 +268,14 @@
       function attach(){
         const buttons=[...document.querySelectorAll('[data-plan-select]')];
         if(!buttons.length) return;
+        console.log('[pricing] attaching plan handlers to', buttons.length, 'buttons');
         buttons.forEach(btn=>{
+          // Log bounding box for diagnostics
+          const rect = btn.getBoundingClientRect();
+          console.log('[pricing] button rect', btn.getAttribute('data-plan-select'), rect);
           btn.addEventListener('click',()=>{
             const plan=btn.getAttribute('data-plan-select');
+            console.log('[pricing] direct listener fired for plan', plan);
             if(window.inbeAuth && typeof window.inbeAuth.loginWithPlan==='function'){
               window.inbeAuth.loginWithPlan(plan);
             } else {

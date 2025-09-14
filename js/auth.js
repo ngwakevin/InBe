@@ -129,6 +129,27 @@
         login();
       }
     });
+
+    // Capture-phase debug logger to trace ANY click and its topmost element
+    document.addEventListener('click', function debugCapture(evt){
+      try {
+        const ep = (evt.composedPath && evt.composedPath()) || [];
+        const top = document.elementFromPoint(evt.clientX, evt.clientY);
+        console.log('[debug-click]', {
+          target: evt.target,
+          topElement: top,
+          hasPlanAttr: !!evt.target.closest('[data-plan-select]'),
+          pathFirst: ep.slice(0,6)
+        });
+      } catch(e) { /* noop */ }
+    }, true);
+
+    // Helper exposed for manual console testing: window.__inbeClickProbe(x,y)
+    window.__inbeClickProbe = function(x,y){
+      const el = document.elementFromPoint(x,y);
+      console.log('[probe]', { x,y, element: el, snapshot: el ? el.outerHTML.slice(0,200) : null});
+      return el;
+    };
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
