@@ -1,11 +1,12 @@
 // Microsoft Entra ID (Azure AD) MSAL configuration
 // Public values only (safe to commit)
 // Using External Identities user flow (sign up + sign in)
-// Flow name: B2X_1_signup_signin1 ; tenantName: ngwakevinoutlook
+// Updated to new app & user flow
+// Flow name: B2X_1_sign_in ; tenantName: ngwakevinoutlook
 const msalConfig = {
   auth: {
-    clientId: '5a3dbeb5-adb1-4291-b91c-9e5d4169f7c4',
-  authority: 'https://ngwakevinoutlook.b2clogin.com/ngwakevinoutlook.onmicrosoft.com/B2X_1_signup_signin2',
+  clientId: '396fcec7-5ed7-4084-b53b-9541272e0857',
+  authority: 'https://ngwakevinoutlook.b2clogin.com/ngwakevinoutlook.onmicrosoft.com/B2X_1_sign_in',
     knownAuthorities: ['ngwakevinoutlook.b2clogin.com'],
     redirectUri: window.location.origin + '/index.html'
   },
