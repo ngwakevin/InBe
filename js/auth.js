@@ -73,13 +73,18 @@
     window.inbeAuth = window.inbeAuth || {};
   window.inbeAuth.loginWithPlan = async function(plan){
       try {
+        console.log('[auth] plan button clicked ->', plan);
         localStorage.setItem('inbe_pending_plan', plan);
     // Use the configured authority (user flow) explicitly
     await msalInstance.loginPopup({ ...loginRequest, authority: msalConfig.auth.authority });
         const pending = localStorage.getItem('inbe_pending_plan');
         if(pending){ setStoredPlan(pending); localStorage.removeItem('inbe_pending_plan'); }
         render();
-      }catch(e){ console.error('[auth] plan login failed', e); }
+      }catch(e){
+        console.error('[auth] plan login failed', e);
+        // Quick user feedback so it doesn't look like "nothing happened"
+        alert('Sign up / sign in could not start. Open the browser console for details (popup blocked or config issue).');
+      }
     };
 
     // If login already present and a pendingPlan was set pre-login (edge case)
