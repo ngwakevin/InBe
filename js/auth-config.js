@@ -15,5 +15,8 @@ const msalConfig = {
   }
 };
 
+// Ensure availability via window for scripts that referenced window.msalConfig
+if(typeof window !== 'undefined'){ window.msalConfig = msalConfig; }
+
 // Scopes we need (Graph basic profile)
 const loginRequest = { scopes: ['User.Read'] };

@@ -9,9 +9,9 @@
   }
 
   async function init(){
-    if(!window.msalConfig){console.warn('[auth] msalConfig missing');return;}
-    if(!window.msal){await loadScript(MSAL_CDN);}    
-    const msalInstance = new msal.PublicClientApplication(msalConfig);
+  if(typeof msalConfig === 'undefined') { console.warn('[auth] msalConfig not defined in scope'); return; }
+  if(!window.msal){await loadScript(MSAL_CDN);}    
+  const msalInstance = new msal.PublicClientApplication(msalConfig);
 
     // Handle redirect response if any
     try { await msalInstance.handleRedirectPromise(); } catch(e){ console.error('[auth] redirect error', e); }
