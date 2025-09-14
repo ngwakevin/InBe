@@ -3,13 +3,23 @@
  */
 (function(){
   const MSAL_CDN = 'https://alcdn.msauth.net/browser/2.38.0/js/msal-browser.min.js';
+  let _attempts = 0;
+  const MAX_ATTEMPTS = 30; // ~3s at 100ms
 
   function loadScript(src){
     return new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.async=true;s.onload=resolve;s.onerror=reject;document.head.appendChild(s);});
   }
 
   async function init(){
-  if(typeof msalConfig === 'undefined') { console.warn('[auth] msalConfig not defined in scope'); return; }
+  if(typeof msalConfig === 'undefined') {
+    if(_attempts===0) console.warn('[auth] msalConfig not defined yet; polling...');
+    if(_attempts++ < MAX_ATTEMPTS){
+      return setTimeout(init, 100);
+    } else {
+      console.error('[auth] msalConfig still missing after retries. auth-config.js failed to load?');
+      return;
+    }
+  }
   if(!window.msal){await loadScript(MSAL_CDN);}    
   const msalInstance = new msal.PublicClientApplication(msalConfig);
 
