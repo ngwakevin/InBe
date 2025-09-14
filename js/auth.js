@@ -116,6 +116,19 @@
 
     render();
     ensureProfile();
+
+    // Fallback global delegation for plan buttons (in case pricing page script not executed)
+    document.addEventListener('click', (evt)=>{
+      const btn = evt.target.closest('[data-plan-select]');
+      if(!btn) return;
+      const plan = btn.getAttribute('data-plan-select');
+      if(window.inbeAuth && typeof window.inbeAuth.loginWithPlan==='function'){
+        window.inbeAuth.loginWithPlan(plan);
+      } else {
+        try{ localStorage.setItem('inbe_pending_plan', plan); }catch(e){}
+        login();
+      }
+    });
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', init); else init();
