@@ -260,30 +260,30 @@
       });
     })();
   </script>
-  <script>
-    // Plan button handlers: store chosen plan and trigger auth if needed
-    (function(){
-      const buttons=[...document.querySelectorAll('[data-plan-select]')];
-      if(!buttons.length) return;
-      buttons.forEach(btn=>{
-        btn.addEventListener('click',()=>{
-          const plan=btn.getAttribute('data-plan-select');
-          // If user already signed in and helper exists, just persist plan
-          if(window.inbeAuth && typeof window.inbeAuth.loginWithPlan==='function'){
-            // We'll ask loginWithPlan to also persist plan (handles both signed/unsigned)
-            window.inbeAuth.loginWithPlan(plan);
-          } else {
-            try{ localStorage.setItem('inbe_pending_plan', plan); }catch(e){}
-            // Fallback: navigate to top (Sign In button) or show alert
-            const authLink=document.querySelector('#inbe-auth-container a');
-            if(authLink){ authLink.focus(); authLink.click(); }
-          }
-        });
-      });
-    })();
-  </script>
   <script src="js/auth-config.js"></script>
   <script src="js/auth.js"></script>
+  <script>
+    // Plan button handlers: run AFTER auth scripts so window.inbeAuth is available
+    (function(){
+      function attach(){
+        const buttons=[...document.querySelectorAll('[data-plan-select]')];
+        if(!buttons.length) return;
+        buttons.forEach(btn=>{
+          btn.addEventListener('click',()=>{
+            const plan=btn.getAttribute('data-plan-select');
+            if(window.inbeAuth && typeof window.inbeAuth.loginWithPlan==='function'){
+              window.inbeAuth.loginWithPlan(plan);
+            } else {
+              try{ localStorage.setItem('inbe_pending_plan', plan); }catch(e){}
+              const authLink=document.querySelector('#auth-entry a');
+              if(authLink){ authLink.focus(); authLink.click(); }
+            }
+          });
+        });
+      }
+      if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', attach); else attach();
+    })();
+  </script>
   <script src="js/app.js"></script>
   
 </body>
