@@ -44,7 +44,7 @@
       if(!account){
         const signIn = document.createElement('a');
         signIn.href='#';
-        signIn.textContent='Sign In';
+  signIn.textContent='Sign Up / In';
         signIn.addEventListener('click', (e)=>{e.preventDefault(); login();});
         authContainer.appendChild(signIn);
       } else {
@@ -71,10 +71,11 @@
 
     // Public helper for plan-based login (called from pricing page)
     window.inbeAuth = window.inbeAuth || {};
-    window.inbeAuth.loginWithPlan = async function(plan){
+  window.inbeAuth.loginWithPlan = async function(plan){
       try {
         localStorage.setItem('inbe_pending_plan', plan);
-        await msalInstance.loginPopup(loginRequest);
+    // Use the configured authority (user flow) explicitly
+    await msalInstance.loginPopup({ ...loginRequest, authority: msalConfig.auth.authority });
         const pending = localStorage.getItem('inbe_pending_plan');
         if(pending){ setStoredPlan(pending); localStorage.removeItem('inbe_pending_plan'); }
         render();
