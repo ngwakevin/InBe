@@ -277,6 +277,17 @@
               try{ localStorage.setItem('inbe_pending_plan', plan); }catch(e){}
               const authLink=document.querySelector('#auth-entry a');
               if(authLink){ authLink.focus(); authLink.click(); }
+              // Poll for auth bootstrap (msal script async load) then invoke
+              let attempts=0;
+              const iv=setInterval(()=>{
+                if(window.inbeAuth && typeof window.inbeAuth.loginWithPlan==='function'){
+                  window.inbeAuth.loginWithPlan(plan);clearInterval(iv);
+                } else if(++attempts>40){ // ~10s
+                  clearInterval(iv);
+                  console.warn('[pricing] auth not ready after waiting; user can retry');
+                  alert('Authentication is still loading. Please click the plan again in a few seconds.');
+                }
+              },250);
             }
           });
         });
